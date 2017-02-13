@@ -2,6 +2,7 @@ sudo: required
 dist: trusty
 
 matrix:
+    fast_finish: true
     include:
         - compiler: gcc
           addons:
@@ -21,6 +22,8 @@ matrix:
                 packages:
                     - g++-5
           env: CXX=g++-5
+        - before_script: "true"
+          script: python ./script/validators/source_validator.py
 
 before_script:
     # setup environment
