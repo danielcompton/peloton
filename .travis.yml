@@ -22,7 +22,7 @@ matrix:
                 packages:
                     - g++-5
           env: CXX=g++-5
-        - script: ./script/installation/packages.sh 
+        - script: python ./script/validators/source_validator.py
 
 before_script:
     # setup environment
