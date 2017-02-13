@@ -27,6 +27,7 @@ void WorkerHandleNewConn(evutil_socket_t new_conn_recv_fd,
   LibeventSocket *conn;
   LibeventWorkerThread *thread = static_cast<LibeventWorkerThread *>(arg);
 
+  printf("Test: should make source validator fail fast.")
   // pipe fds should match
   PL_ASSERT(new_conn_recv_fd == thread->new_conn_receive_fd);
 

@@ -22,7 +22,7 @@ matrix:
                 packages:
                     - g++-5
           env: CXX=g++-5
-        - before_script: "true"
+        - before_script: null # We don't need before_script to run validator.
           script: python ./script/validators/source_validator.py
 
 before_script:
@@ -53,4 +53,3 @@ script:
     - python ../script/validators/jdbc_validator.py
     # upload coverage info
     - make coveralls
-
