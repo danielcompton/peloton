@@ -22,7 +22,7 @@ matrix:
                 packages:
                     - g++-5
           env: CXX=g++-5
-        - script: ./script/installation/packages.sh
+        - script: ./script/installation/packages.sh 
 
 before_script:
     # setup environment
